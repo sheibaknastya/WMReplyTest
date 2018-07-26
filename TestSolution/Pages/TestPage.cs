@@ -4,34 +4,34 @@ using System;
 
 namespace TestSolution
 {
-	class TestPage
-	{
-		IWebDriver driver;
+    public class TestPage
+    {
+        private IWebDriver _driver;
 
-		By inputField = By.Id("new-todo");
-		By addedItem = By.CssSelector("ul#todo-list li:last-child label");
-		By itemsCounter = By.Id("todo-count");
+        private By _inputField = By.Id("new-todo");
+        private By _addedItem = By.CssSelector("ul#todo-list li:last-child label");
+        private By _itemsCounter = By.Id("todo-count");
 
-		public TestPage(IWebDriver driver)
-		{
-			this.driver = driver;
-		}
+        public TestPage(IWebDriver driver)
+        {
+            _driver = driver;
+        }
 
-		public void ProvideTask(string name)
-		{
-			driver.FindElement(inputField).SendKeys(name);
-		} 
+        public void ProvideTask(string name)
+        {
+            _driver.FindElement(_inputField).SendKeys(name);
+        }
 
-		public void PressEnter()
-		{
-			driver.FindElement(inputField).SendKeys(Keys.Enter);
-		}
+        public void PressEnter()
+        {
+            _driver.FindElement(_inputField).SendKeys(Keys.Enter);
+        }
 
-		public void CheckItemsName(string name)
-		{
-			var text = driver.FindElement(addedItem).Text;
-			Assert.IsTrue(text.Equals(name), String.Format("Item's name mismatch. Expected: {0}. Actual: {1}", name, text));
-		}
+        public void CheckItemsName(string name)
+        {
+            var text = _driver.FindElement(_addedItem).Text;
+            Assert.IsTrue(text.Equals(name), $"Item's name mismatch. Expected: {name}. Actual: {text}");
+        }
 
-	}
+    }
 }
