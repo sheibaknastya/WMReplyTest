@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using System;
 
-namespace TestSolution
+namespace TestSolution.Helpers
 {
     public class WebDriver
     {

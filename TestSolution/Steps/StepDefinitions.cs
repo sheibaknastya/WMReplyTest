@@ -1,6 +1,10 @@
-﻿using TechTalk.SpecFlow;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Text.RegularExpressions;
+using TechTalk.SpecFlow;
+using TestSolution.Helpers;
+using TestSolution.Pages;
 
-namespace TestSolution
+namespace TestSolution.Steps
 {
     [Binding]
     public class StepDefinitions
@@ -35,7 +39,24 @@ namespace TestSolution
         [Then(@"'(.*)' is added to the list")]
         public void ThenIsAddedToTheList(string name)
         {
-            new TestPage(WebDriver.GetDriver()).CheckItemsName(name);
+            var value = new TestPage(WebDriver.GetDriver()).GetItemsName();
+
+            Assert.IsTrue(value.Equals(name), $"Item's name mismatch. Expected: {name}. Actual: {value}");
+        }
+
+        [Then(@"Total tasks counter is '(.*)'")]
+        public void ThenTotalTasksCounter(string number)
+        {
+            var text = new TestPage(WebDriver.GetDriver()).GetItemsNumber();
+
+            Regex reg = new Regex("[0-9]+");
+            Match match = reg.Match(text);
+
+            if (match.Success)
+            {
+                Assert.IsTrue(match.Value.Equals(number), $"Items' number mismatch. Expected: {number}. Actual: {match.Value}");
+            }
+
         }
     }
 }

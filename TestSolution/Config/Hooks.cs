@@ -1,6 +1,7 @@
 ﻿using TechTalk.SpecFlow;
+using TestSolution.Helpers;
 
-namespace TestSolution
+namespace TestSolution.Config
 {
     [Binding]
     public sealed class Hooks

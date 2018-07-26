@@ -15,6 +15,7 @@ Scenario: POSTIVE Add task to the list
 	Then 'test2' is added to the list
 	When The user adds 'test3' as a task
 	Then 'test3' is added to the list
+	And Total tasks counter is '3'
 
 Scenario: NEGATIVE Add task to the list
 	Given Testing URL is opened
@@ -22,3 +23,10 @@ Scenario: NEGATIVE Add task to the list
 	Then 'test' is added to the list
 	When The user adds 'test2' as a task
 	Then 'test3' is added to the list
+
+Scenario: NEGATIVE Add task to the list 2
+	Given Testing URL is opened
+	When The user adds 'test' as a task
+	Then 'test' is added to the list
+	When The user adds 'test2' as a task
+	Then Total tasks counter is '3'

@@ -1,7 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
-namespace TestSolution
+namespace TestSolution.Pages
 {
     public class TestPage
     {
@@ -26,10 +25,14 @@ namespace TestSolution
             _driver.FindElement(_inputField).SendKeys(Keys.Enter);
         }
 
-        public void CheckItemsName(string name)
+        public string GetItemsName()
         {
-            var text = _driver.FindElement(_addedItem).Text;
-            Assert.IsTrue(text.Equals(name), $"Item's name mismatch. Expected: {name}. Actual: {text}");
+            return _driver.FindElement(_addedItem).Text;
+        }
+
+        public string GetItemsNumber()
+        {
+            return _driver.FindElement(_itemsCounter).Text;
         }
 
     }

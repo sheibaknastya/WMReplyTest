@@ -24,4 +24,3 @@ C:\Users\a.sheibak-ext\source\repos\TestSolution\TestSolution\obj\Debug\TestSolu
 C:\Users\a.sheibak-ext\source\repos\TestSolution\TestSolution\obj\Debug\TestSolution.csproj.CopyComplete
 C:\Users\a.sheibak-ext\source\repos\TestSolution\TestSolution\obj\Debug\TestSolution.dll
 C:\Users\a.sheibak-ext\source\repos\TestSolution\TestSolution\obj\Debug\TestSolution.pdb
-C:\Users\a.sheibak-ext\source\repos\TestSolution\TestSolution\obj\Debug\TestSolution.csprojAssemblyReference.cache
