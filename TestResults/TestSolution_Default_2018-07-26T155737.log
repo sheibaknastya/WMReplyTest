@@ -1,0 +1,78 @@
+﻿2018-07-26T15:57:37.5667814+02:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2018-07-26T15:57:37.6758589+02:00;VSTestExecutionThread;Info;SpecRun: running tests in C:\Users\a.sheibak-ext\source\repos\TestSolution\TestSolution\bin\Debug\TestSolution.dll
+2018-07-26T15:57:37.6758589+02:00;VSTestExecutionThread;Info;Profile: Default
+2018-07-26T15:57:37.7299123+02:00;Thread#13;Info;Discovering target: Default
+2018-07-26T15:57:37.7299123+02:00;Thread#13;Info;Discovering tests from assembly: C:\Users\a.sheibak-ext\source\repos\TestSolution\TestSolution\bin\Debug\TestSolution.dll
+Appdomain Disposed
+Test Suite Dump
+#0: TestSolution/Default - 
+#1: Default - 
+#2: TestSolution - 
+#3: Test2 - 
+#4: POSTIVE Add task to the list - TestAssembly:TestSolution/Feature:Test2/Scenario:POSTIVE+Add+task+to+the+list
+#5: NEGATIVE Add task to the list - TestAssembly:TestSolution/Feature:Test2/Scenario:NEGATIVE+Add+task+to+the+list
+End: Test Suite Dump
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #4 from normal test queue 
+Thread#0:Scheduler: considering testitem #4 for thread 0
+Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #4 for thread 0
+Thread#0:Scheduler: Test #4 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread #0: creating new test thread executor for TestSolution, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+Loading SpecRun type 'TechTalk.SpecRun.Framework.TestAssemblyExecutor' from: C:\Users\a.sheibak-ext\source\repos\TestSolution\packages\SpecRun.Runner.1.7.2\tools\TechTalk.SpecRun.Framework.Executor.dll
+Thread#0: Test #4/0 is started on thread #0
+Thread#0:T:-> Using app.config
+Thread#0:B:Given Testing URL is opened
+Thread#0:T:done: StepDefinitions.GivenIOpenProvidedURL() (1.2s)
+Thread#0:B:When The user adds 'test' as a task
+Thread#0:T:done: StepDefinitions.WhenAddTask("test") (0.3s)
+Thread#0:B:Then 'test' is added to the list
+Thread#0:T:done: StepDefinitions.ThenIsAddedToTheList("test") (0.1s)
+Thread#0:B:When The user adds 'test2' as a task
+Thread#0:T:done: StepDefinitions.WhenAddTask("test2") (0.1s)
+Thread#0:B:Then 'test2' is added to the list
+Thread#0:T:done: StepDefinitions.ThenIsAddedToTheList("test2") (0.0s)
+Thread#0:B:When The user adds 'test3' as a task
+Thread#0:T:done: StepDefinitions.WhenAddTask("test3") (0.1s)
+Thread#0:B:Then 'test3' is added to the list
+Thread#0:T:done: StepDefinitions.ThenIsAddedToTheList("test3") (0.0s)
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #5 from normal test queue 
+Thread#0:Scheduler: considering testitem #5 for thread 0
+Thread#0:TestItem#5:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#5:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#5:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #5 for thread 0
+Thread#0:Scheduler: Test #5 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #4/0 is finished on thread #0 as Succeeded within 4.2819375 seconds
+Thread#0: Test #5/0 is started on thread #0
+Thread#0:B:Given Testing URL is opened
+Thread#0:T:done: StepDefinitions.GivenIOpenProvidedURL() (1.0s)
+Thread#0:B:When The user adds 'test' as a task
+Thread#0:T:done: StepDefinitions.WhenAddTask("test") (0.3s)
+Thread#0:B:Then 'test' is added to the list
+Thread#0:T:done: StepDefinitions.ThenIsAddedToTheList("test") (0.0s)
+Thread#0:B:When The user adds 'test2' as a task
+Thread#0:T:done: StepDefinitions.WhenAddTask("test2") (0.1s)
+Thread#0:B:Then 'test3' is added to the list
+Thread#0:T:error: Assert.IsTrue failed. Item's name mismatch. Expected: test3. Actual: test2
+Thread#0:TestItem#5:Scheduler: reschedule tests for testitem #5
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: at the end of normal test queue
+Thread#0:Scheduler: enumerator for thread is at end
+Thread#0:Scheduler: No more tests for thread
+Thread#0: Test #5/0 is finished on thread #0 as Failed within 3.5643708 seconds
+Appdomain Disposed
+Thread#-1:Scheduler: get next test for thread -1
+Thread#:Scheduler: at the end of normal test queue
+Thread#-1:Scheduler: enumerator for thread is at end
+Total: 2
+Succeeded: 1
+Ignored: 0
+Pending: 0
+Skipped: 0
+Failed: 1

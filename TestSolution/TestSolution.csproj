@@ -73,16 +73,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hooks.cs" />
-    <Compile Include="StepDefinitions.cs" />
-    <Compile Include="Test.feature.cs">
+    <Compile Include="Config\Hooks.cs" />
+    <Compile Include="Steps\StepDefinitions.cs" />
+    <Compile Include="Features\Test2.feature.cs">
+      <DependentUpon>Test2.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\Test.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Test.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestPage.cs" />
-    <Compile Include="WebDriver.cs" />
+    <Compile Include="Pages\TestPage.cs" />
+    <Compile Include="Helpers\WebDriver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -97,7 +102,11 @@
     <None Include="SpecRunTestProfile_2011_09.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Test.feature">
+    <None Include="Features\Test2.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Test2.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Test.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Test.feature.cs</LastGenOutput>
     </None>

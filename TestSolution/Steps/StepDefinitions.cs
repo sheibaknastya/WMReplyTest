@@ -6,7 +6,8 @@ namespace TestSolution
     public class StepDefinitions
     {
         [Given(@"I open testing URL")]
-        public void GivenIOpenProvidedURL()
+		[Given(@"Testing URL is opened")]
+		public void GivenIOpenProvidedURL()
         {
 			WebDriver.GetDriver().Navigate().GoToUrl("http://todomvc.com/examples/angularjs/#/");
         }
@@ -21,6 +22,14 @@ namespace TestSolution
         public void WhenIPressEnter()
         {
 			new TestPage(WebDriver.GetDriver()).PressEnter();
+		}
+
+		[When(@"The user adds '(.*)' as a task")]
+		public void WhenAddTask(string name)
+		{
+			var page = new TestPage(WebDriver.GetDriver());
+			page.ProvideTask(name);
+			page.PressEnter();
 		}
 
 		[Then(@"'(.*)' is added to the list")]

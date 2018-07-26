@@ -1,5 +1,7 @@
-﻿Feature: Test
+﻿@Obsolete
+Feature: Test
 	The purpose of this test is to check http://todomvc.com/examples/angularjs/#/
+
 
 Scenario: POSTIVE Add task to the list
 	Given I open testing URL

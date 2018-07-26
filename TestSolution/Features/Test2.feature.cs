@@ -10,27 +10,37 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace TestSolution
+namespace TestSolution.Features
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.3.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Test", Description="\tThe purpose of this test is to check http://todomvc.com/examples/angularjs/#/", SourceFile="Test.feature", SourceLine=0)]
-    public partial class TestFeature
+    [TechTalk.SpecRun.FeatureAttribute("Test2", Description=@"	The purpose of this test is to check http://todomvc.com/examples/angularjs/#/
+
+	And fix the issues:
+	 No folder/namespace structure. Everything at the root.
+	 Feature files are in an imperative style rather than declarative (they describe specific steps, not behaviour).
+	 The code is inconsistently formatted.", SourceFile="Features\\Test2.feature", SourceLine=0)]
+    public partial class Test2Feature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Test.feature"
+#line 1 "Test2.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Test", "\tThe purpose of this test is to check http://todomvc.com/examples/angularjs/#/", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Test2", @"	The purpose of this test is to check http://todomvc.com/examples/angularjs/#/
+
+	And fix the issues:
+	 No folder/namespace structure. Everything at the root.
+	 Feature files are in an imperative style rather than declarative (they describe specific steps, not behaviour).
+	 The code is inconsistently formatted.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -61,55 +71,45 @@ namespace TestSolution
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("POSTIVE Add task to the list", SourceLine=3)]
+        [TechTalk.SpecRun.ScenarioAttribute("POSTIVE Add task to the list", SourceLine=9)]
         public virtual void POSTIVEAddTaskToTheList()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("POSTIVE Add task to the list", ((string[])(null)));
-#line 4
-this.ScenarioSetup(scenarioInfo);
-#line 5
- testRunner.Given("I open testing URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 6
- testRunner.When("I add \'test\' as a task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 7
- testRunner.And("I press enter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 8
- testRunner.Then("\'test\' is added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 9
- testRunner.When("I add \'test2\' as a task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.And("I press enter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 11
- testRunner.Then("\'test2\' is added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("Testing URL is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
- testRunner.When("I add \'test3\' as a task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("The user adds \'test\' as a task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
- testRunner.And("I press enter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("\'test\' is added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 14
+ testRunner.When("The user adds \'test2\' as a task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+ testRunner.Then("\'test2\' is added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 16
+ testRunner.When("The user adds \'test3\' as a task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 17
  testRunner.Then("\'test3\' is added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("NEGATIVE Add task to the list", SourceLine=15)]
+        [TechTalk.SpecRun.ScenarioAttribute("NEGATIVE Add task to the list", SourceLine=18)]
         public virtual void NEGATIVEAddTaskToTheList()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("NEGATIVE Add task to the list", ((string[])(null)));
-#line 16
-this.ScenarioSetup(scenarioInfo);
-#line 17
- testRunner.Given("I open testing URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 18
- testRunner.When("I add \'test\' as a task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
- testRunner.And("I press enter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 20
- testRunner.Then("\'test\' is added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("Testing URL is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 21
- testRunner.When("I add \'test2\' as a task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("The user adds \'test\' as a task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
- testRunner.And("I press enter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("\'test\' is added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 23
+ testRunner.When("The user adds \'test2\' as a task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
  testRunner.Then("\'test3\' is added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
