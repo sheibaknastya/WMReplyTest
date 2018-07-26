@@ -1,16 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using System;
 
 namespace TestSolution
 {
     public class TestPage
     {
-        private IWebDriver _driver;
+        private readonly IWebDriver _driver;
 
-        private By _inputField = By.Id("new-todo");
-        private By _addedItem = By.CssSelector("ul#todo-list li:last-child label");
-        private By _itemsCounter = By.Id("todo-count");
+        private readonly By _inputField = By.Id("new-todo");
+        private readonly By _addedItem = By.CssSelector("ul#todo-list li:last-child label");
+        private readonly By _itemsCounter = By.Id("todo-count");
 
         public TestPage(IWebDriver driver)
         {
